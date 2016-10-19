@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <local-tx-datasource>
+    <jndi-name>ds/mossws</jndi-name>
+    <connection-url>jdbc:mysql://localhost:3306/bdaca_proj_grupo1</connection-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+    <user-name>root</user-name>
+    <password>admin</password>
+  </local-tx-datasource>
+</datasources>

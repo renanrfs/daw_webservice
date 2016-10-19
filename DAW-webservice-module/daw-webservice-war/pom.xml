@@ -1,0 +1,64 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>pt.iscte.moss</groupId>
+		<artifactId>DAW-webservice-module</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>daw-webservice-war</artifactId>
+	<packaging>war</packaging>
+
+	<name>DAW-webservice-war</name>
+	<url>https://github.com/renanrfs/daw_webservice.git</url>
+
+	<dependencies>
+		<!-- System -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>pt.iscte.moss</groupId>
+			<artifactId>daw-wscore-jar</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>moss-ws</finalName>
+
+		<plugins>
+			<!-- maven-war-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

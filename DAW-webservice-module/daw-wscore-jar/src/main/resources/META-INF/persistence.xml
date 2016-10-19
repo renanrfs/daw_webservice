@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="moss-ws" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Data source project -->
+		<jta-data-source>java:/ds/mossws</jta-data-source>
+
+		<class>pt.iscte.moss.dao.entity.City</class>
+		<class>pt.iscte.moss.dao.entity.Country</class>
+		<class>pt.iscte.moss.dao.entity.User</class>
+	</persistence-unit>
+
+</persistence>
